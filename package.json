@@ -1,0 +1,35 @@
+{
+  "name": "saasify-landing-page",
+  "version": "1.0.0",
+  "description": "Simple landing page.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GMerencio/saasify-landing-page.git"
+  },
+  "author": "gmerencio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GMerencio/saasify-landing-page/issues"
+  },
+  "homepage": "https://github.com/GMerencio/saasify-landing-page#readme",
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "node-sass": "^4.11.0",
+    "normalize.css": "^8.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.6.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "smoothscroll-polyfill": "^0.4.3"
+  }
+}

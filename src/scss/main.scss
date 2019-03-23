@@ -1,0 +1,202 @@
+/**
+ * CONTENTS
+ *
+ * GLOBAL
+ * Config...............Configuration variables.
+ * Mixins...............Useful mixins.
+ * Colors...............Color variables.
+ * Typography...........Typography-related variables.
+ * Breakpoints..........Breakpoint values.
+ *
+ * GENERIC
+ * Box-sizing...........Adjust default box-sizing.
+ *
+ * BASE
+ * Body.................Base body style.
+ * Headings.............H1-H6 base styles.
+ *
+ * UTILITIES
+ * Layout...............Classes used for general layout throughout the site.
+ * Decoration...........General classes that decorate several elements.
+ *
+ * OBJECTS
+ * Text.................Various text styles.
+ * Background...........Various background styles.
+ * Image................Various image styles.
+ * List.................Styles for ordered and unordered lists.
+ *
+ * COMPONENTS
+ * Buttons..............Button elements.
+ * Page-head............The main page header.
+ * Primary-nav..........Main navigation menu.
+ * Page-content.........Main page content.
+ */
+ 
+ 
+ 
+/*------------------------------------*\
+  #Config
+\*------------------------------------*/
+ 
+$browser-context: 16;
+
+
+
+/*------------------------------------*\
+  #Mixins
+\*------------------------------------*/
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+@mixin color-modifiers($attribute: 'color', $prefix: '-') {
+  @each $name, $hex in $colors {
+    &#{$prefix}#{$name} {
+      #{$attribute}: $hex;
+    }
+  }
+}
+
+
+
+/*------------------------------------*\
+  #Colors
+\*------------------------------------*/
+
+$colors: (
+  white: #FFF
+);
+
+
+
+/*------------------------------------*\
+  #Typography
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+  #Breakpoints
+\*------------------------------------*/
+
+$bp-small: em(768);
+
+
+
+/*------------------------------------*\
+  #Box-sizing
+\*------------------------------------*/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+/*------------------------------------*\
+  #Body
+\*------------------------------------*/
+
+body {
+}
+
+
+
+/*------------------------------------*\
+  #Headings
+\*------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+
+
+/*------------------------------------*\
+  #Layout
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+  #Decoration
+\*------------------------------------*/
+
+
+
+
+/*------------------------------------*\
+  #Text
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+  #Background
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+  #Image
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+  #List
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+  #Buttons
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+  #Page-head
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+  #Primary-nav
+\*------------------------------------*/
+
+
+
+
+
+/*------------------------------------*\
+  #Page-content
+\*------------------------------------*/
+
+.page-content {
+}
