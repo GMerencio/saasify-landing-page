@@ -21,7 +21,7 @@ function scrollToAnchor(e) {
  */
 
 function windowScroll(e) {
-  var header = document.querySelector('.js-header');
+  var header = document.querySelector('.js-head');
   var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
   console.log("Current header height: " + header.clientHeight);
   console.log("Current scrollTop: " + scrollTop);

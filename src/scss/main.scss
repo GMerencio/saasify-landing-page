@@ -69,7 +69,13 @@ $browser-context: 16;
 \*------------------------------------*/
 
 $colors: (
-  white: #FFF
+  white: #FFF,
+  regent-gray: #919AA3,
+  cadet-blue: #B0AFC6,
+  tarawera: #072A44,
+  mirage: #171C34,
+  science-blue: #0074E4,
+  picton-blue: #308DE8
 );
 
 
@@ -78,7 +84,8 @@ $colors: (
   #Typography
 \*------------------------------------*/
 
-
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+$main-font: rem(18) 'Poppins', sans-serif;
 
 
 
@@ -109,6 +116,8 @@ html {
 \*------------------------------------*/
 
 body {
+  font: $main-font;
+  color: map-get($colors, regent-gray);
 }
 
 
@@ -142,7 +151,10 @@ h1, h2, h3, h4, h5, h6 {
   #Text
 \*------------------------------------*/
 
-
+.area-heading {
+  font-size: rem(44);
+  color: map-get($colors, mirage);
+}
 
 
 
@@ -158,7 +170,9 @@ h1, h2, h3, h4, h5, h6 {
   #Image
 \*------------------------------------*/
 
+.img-rounded {
 
+}
 
 
 
@@ -166,7 +180,13 @@ h1, h2, h3, h4, h5, h6 {
   #List
 \*------------------------------------*/
 
+.li-check {
+  list-style: url('../img/checkmark-circle.svg');
+}
 
+.li-cross {
+  list-style: url('../img/close-circle.svg');
+}
 
 
 
@@ -174,7 +194,25 @@ h1, h2, h3, h4, h5, h6 {
   #Buttons
 \*------------------------------------*/
 
+.btn {
+  display: flex;
+  background-color: map-get($colors, science-blue);
+  width: rem(200);
+  height: rem(60);
+  border-radius: rem(8);
+  box-shadow: rem(0) rem(10) rem(50) rgba(7,42,68,0.12);
+  color: map-get($colors, white);
+  text-decoration: none;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+}
 
+.btn--head {
+  background-color: map-get($colors, white);
+  color: map-get($colors, tarawera);
+  box-shadow: rem(0) rem(5) rem(20) rgba(7,42,68,0.1);
+}
 
 
 
@@ -182,7 +220,9 @@ h1, h2, h3, h4, h5, h6 {
   #Page-head
 \*------------------------------------*/
 
-
+.header-fixed {
+  // position: fixed;
+}
 
 
 
