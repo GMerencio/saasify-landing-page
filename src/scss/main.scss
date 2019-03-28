@@ -12,6 +12,7 @@
  * Box-sizing...........Adjust default box-sizing.
  *
  * BASE
+ * Document.............Base HTML style.
  * Body.................Base body style.
  * Headings.............H1-H6 base styles.
  *
@@ -27,9 +28,12 @@
  *
  * COMPONENTS
  * Buttons..............Button elements.
+ * Containers...........Generic containers used throughout the site.
  * Page-head............The main page header.
  * Primary-nav..........Main navigation menu.
- * Page-content.........Main page content.
+ * Product-area.........The product area of the landing page.
+ * Pricing-area.........The pricing area of the landing page.
+ * Page-footer..........The page footer.
  */
  
  
@@ -112,12 +116,23 @@ html {
 
 
 /*------------------------------------*\
+  #Document
+\*------------------------------------*/
+
+html {
+  // font-size: 100vw/1920px * 16px;
+}
+
+
+
+/*------------------------------------*\
   #Body
 \*------------------------------------*/
 
 body {
   font: $main-font;
   color: map-get($colors, regent-gray);
+  text-align: center;
 }
 
 
@@ -136,7 +151,13 @@ h1, h2, h3, h4, h5, h6 {
   #Layout
 \*------------------------------------*/
 
+.float-right {
+  float: right;
+}
 
+.clear-after::after {
+  clear: both;
+}
 
 
 
@@ -144,16 +165,46 @@ h1, h2, h3, h4, h5, h6 {
   #Decoration
 \*------------------------------------*/
 
+.circlet-block {
+  display: inline-block;
+}
 
+.circlet {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 100%;
+  width: rem(16);
+  height: rem(16);
+  background-color: map-get($colors, regent-gray);
+  opacity: 0.3;
+}
+
+.circlet--filled {
+  background-color: map-get($colors, mirage);
+  opacity: 1;
+}
 
 
 /*------------------------------------*\
   #Text
 \*------------------------------------*/
 
+.txt {
+  @include color-modifiers;
+}
+
+.txt-nodecoration {
+  text-decoration: none;
+}
+
 .area-heading {
   font-size: rem(44);
   color: map-get($colors, mirage);
+}
+
+.sub-heading {
+  width: rem(520);
+  margin: 0 auto;
 }
 
 
@@ -196,6 +247,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn {
   display: flex;
+  margin: 0 auto;
   background-color: map-get($colors, science-blue);
   width: rem(200);
   height: rem(60);
@@ -217,8 +269,31 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*------------------------------------*\
+  #Containers
+\*------------------------------------*/
+
+.box-container {
+
+}
+
+  .box-container__item {
+  
+  }
+  
+  .box-container__item--special {
+  
+  }
+
+
+
+/*------------------------------------*\
   #Page-head
 \*------------------------------------*/
+
+.page-head {
+  font-size: rem(16);
+  display: inline-block;
+}
 
 .header-fixed {
   // position: fixed;
@@ -230,13 +305,70 @@ h1, h2, h3, h4, h5, h6 {
   #Primary-nav
 \*------------------------------------*/
 
+.primary-nav {
 
+}
+
+  .primary-nav__list {
+  
+  }
+  
+  .primary-nav__item {
+  
+  }
+  
+  .primary-nav__link {
+  
+  }
 
 
 
 /*------------------------------------*\
-  #Page-content
+  #Product-area
 \*------------------------------------*/
 
-.page-content {
+.product-area {
+
 }
+
+.product-container {
+  display: inline-block;
+  width: rem(383);
+  height: rem(318);
+}
+
+.product-img {
+  width: rem(720);
+  height: rem(480);
+}
+
+
+
+/*------------------------------------*\
+  #Pricing-area
+\*------------------------------------*/
+
+.pricing-options {
+  display: inline-flex;
+  margin: 0 auto;
+}
+
+
+
+/*------------------------------------*\
+  #Page-footer
+\*------------------------------------*/
+
+.page-footer {
+  font-size: rem(12);
+  color: map-get($colors, mirage);
+  background: linear-gradient(153deg, #00FFFFFF, #EBEEF0);
+}
+
+  .page-footer__grid {
+    display: flex;
+  }
+  
+  .page-footer__column {
+  
+  }
