@@ -107,10 +107,13 @@
         <p class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing
         elit. Ut pretium pretium tempor.</p>
         
-        <div>
-          <img src="img/product-image-1.png" alt="Product image 1">
-          <img src="img/product-image-2.png" alt="Product image 2">
-          <img src="img/product-image-3.png" alt="Product image 3">
+        <div class="slideshow  js-slideshow">
+          <img src="img/product-image-1.png" alt="Product image 1"
+          class="slideshow__img">
+          <img src="img/product-image-2.png" alt="Product image 2"
+          class="slideshow__img">
+          <img src="img/product-image-3.png" alt="Product image 3"
+          class="slideshow__img">
         </div>
         <div class="circlet-block">
           <span class="circlet  circlet--filled"></span>
@@ -131,7 +134,7 @@
         
         <div class="box-container">
           <div class="box-container__item">
-            <img src="img/susan.png" alt="Susan Herrera">
+            <img src="img/susan.png" alt="Susan Herrera" class="img-rounded">
             <p>Donec facilisis tortor ut augue lacinia, at viverra
             est semper. Sed sapien metus, scelerisque nec pharetra
             id, tempor a tortor.</p>
@@ -139,7 +142,7 @@
           </div>
           
           <div class="box-container__item">
-            <img src="img/barbara.png" alt="Barbara Gordon">
+            <img src="img/barbara.png" alt="Barbara Gordon" class="img-rounded">
             <p>Donec facilisis tortor ut augue lacinia, at viverra
             est semper. Sed sapien metus, scelerisque nec pharetra
             id, tempor a tortor.</p>
@@ -147,7 +150,7 @@
           </div>
           
           <div class="box-container__item">
-            <img src="img/george.png" alt="George Sanchez">
+            <img src="img/george.png" alt="George Sanchez" class="img-rounded">
             <p>Donec facilisis tortor ut augue lacinia, at viverra
             est semper. Sed sapien metus, scelerisque nec pharetra
             id, tempor a tortor.</p>
@@ -165,12 +168,12 @@
         elit. Ut pretium pretium tempor.</p>
         
         <div class="pricing-options">
-          <p>Billed Monthly</p>
-          <label class="switch">
-            <input type="checkbox">
-            <span class="slider"></span>
+          <p class="js-monthly-txt">Billed Monthly</p>
+          <label class="toggle-switch">
+            <input type="checkbox" class="toggle-switch__checkbox  js-pricing-checkbox">
+            <span class="toggle-switch__slider"></span>
           </label>
-          <p>Billed Quarterly</p>
+          <p class="js-quarterly-txt">Billed Quarterly</p>
         </div>
         
         <div class="box-container">
@@ -182,7 +185,7 @@
               <li class="li-cross">Limited This</li>
               <li class="li-check">Unlimited That</li>
             </ul>
-            <p>89.99</p>
+            <p class="js-price  txt-price"></p>
           </div>
           
           <div class="box-container__item--special">
@@ -193,7 +196,7 @@
               <li class="li-cross">Limited This</li>
               <li class="li-check">Unlimited That</li>
             </ul>
-            <p>119.99</p>
+            <p class="js-price  txt-price"></p>
           </div>
           
           <div class="box-container__item">
@@ -204,7 +207,7 @@
               <li class="li-check">Unlimited This</li>
               <li class="li-check">Unlimited That</li>
             </ul>
-            <p>139.99</p>
+            <p class="js-price  txt-price"></p>
           </div>
         </div>
         
@@ -248,7 +251,7 @@
         </ul>
         
         <img src="img/saasify-logo.png" alt="Saasify Logo"
-        class="page-footer__column">
+        class="page-footer__column  img-retina">
       </div>
       
       <p>Freebie designed by Kishore for Project365.design</p>

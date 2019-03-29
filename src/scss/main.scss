@@ -28,6 +28,8 @@
  *
  * COMPONENTS
  * Buttons..............Button elements.
+ * Slideshow............Slideshow component.
+ * Toggle-switch........Toggle switch components.
  * Containers...........Generic containers used throughout the site.
  * Page-head............The main page header.
  * Primary-nav..........Main navigation menu.
@@ -222,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
 \*------------------------------------*/
 
 .img-rounded {
-
+  border-radius: 50%;
 }
 
 
@@ -265,6 +267,83 @@ h1, h2, h3, h4, h5, h6 {
   color: map-get($colors, tarawera);
   box-shadow: rem(0) rem(5) rem(20) rgba(7,42,68,0.1);
 }
+
+
+
+/*------------------------------------*\
+  #Slideshow
+\*------------------------------------*/
+
+.slideshow {
+  position: relative;
+  width: rem(964);
+  height: rem(648);
+}
+
+  .slideshow__img {
+    position: absolute;
+    left: 0;
+    top:  0;
+    transition: opacity 1s;
+    opacity: 1;
+  }
+
+  .slideshow__img--hidden {
+    opacity: 0;
+  }
+
+
+
+/*------------------------------------*\
+  #Togle-switch
+\*------------------------------------*/
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+  .toggle-switch__checkbox {
+    display: none;
+  }
+  
+  .toggle-switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top:    0;
+    left:   0;
+    right:  0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+    
+    &::before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+  } 
+  
+  .toggle-switch__checkbox:checked + .toggle-switch__slider {
+    background-color: #2196F3;
+  }
+
+  .toggle-switch__checkbox:focus + .toggle-switch__slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  .toggle-switch__checkbox:checked + .toggle-switch__slider::before {
+    transform: translateX(26px);
+  }
 
 
 
@@ -351,6 +430,28 @@ h1, h2, h3, h4, h5, h6 {
 .pricing-options {
   display: inline-flex;
   margin: 0 auto;
+}
+
+.txt-price {
+  &::before {
+    content: "$";
+  }
+}
+
+.txt-price--monthly {
+  &::after {
+    content: "/mo";
+  }
+}
+
+.txt-price--quarterly {
+  &::after {
+    content: "/qr";
+  }
+}
+
+.txt-selected {
+  font-weight: bold;
 }
 
 
