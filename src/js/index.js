@@ -28,7 +28,7 @@ window.onload = function() {
     anchor.addEventListener('click', scrollToAnchor);
   });
   
-  // Initialize slideshow component.
+  // Initialize the slideshow component.
   
-  initializeSlideshow();
+  initializeSlideshow(true);
 };

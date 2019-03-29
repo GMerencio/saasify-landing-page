@@ -19,8 +19,6 @@ export var scrollToAnchor = function(e) {
 export var windowScroll = function(e) {
   var header = document.querySelector('.js-head');
   var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-  console.log("Current header height: " + header.clientHeight);
-  console.log("Current scrollTop: " + scrollTop);
   
   if (scrollTop > header.clientHeight) {
     header.classList.add('header-fixed');

@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 \*------------------------------------*/
 
 .circlet-block {
-  display: inline-block;
+  display: block;
 }
 
 .circlet {
@@ -275,6 +275,7 @@ h1, h2, h3, h4, h5, h6 {
 \*------------------------------------*/
 
 .slideshow {
+  display: inline-block;
   position: relative;
   width: rem(964);
   height: rem(648);
