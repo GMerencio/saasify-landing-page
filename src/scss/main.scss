@@ -122,7 +122,7 @@ html {
 \*------------------------------------*/
 
 html {
-  // font-size: 100vw/1920px * 16px;
+  font-size: 100vw/1920px * 16px;
 }
 
 
@@ -215,7 +215,31 @@ h1, h2, h3, h4, h5, h6 {
   #Background
 \*------------------------------------*/
 
+.bg-pattern-1 {
+  position: relative;
+  
+  &::before {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    content: "";
+    width:  100%;
+    height: 100%;
+    background-image:     url('../img/bg-pattern-1.png');
+    background-repeat:    no-repeat;
+    background-size:      contain;
+  }
+}
 
+.bg-pattern-2 {
+  background-image: url('../img/bg-pattern-2.png');
+  background-size: cover;
+}
+
+.bg-pattern-3 {
+  background-image: url('../img/bg-pattern-3.png');
+  background-size: cover;
+}
 
 
 
@@ -283,6 +307,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .slideshow__img {
     position: absolute;
+    width: 100%;
     left: 0;
     top:  0;
     transition: opacity 1s;
@@ -372,11 +397,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-head {
   font-size: rem(16);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 }
+ 
+  .page-head__login {
+    margin-left:  rem(494.13);
+    margin-right: rem(40.3);
+    color: map-get($colors, white);
+    text-decoration: none;
+    font-weight: bold;
+  }
 
 .header-fixed {
-  // position: fixed;
+  position: fixed;
+  transform: translateX(-50%);
 }
 
 
@@ -390,15 +425,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
   .primary-nav__list {
-  
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-left:    rem(0.3);
+    margin-top:     0;
+    margin-bottom:  0;
   }
   
   .primary-nav__item {
-  
+    margin-left: rem(40.6);
   }
   
   .primary-nav__link {
-  
+    text-decoration: none;
+    color: map-get($colors, regent-gray);
   }
 
 
@@ -406,10 +447,6 @@ h1, h2, h3, h4, h5, h6 {
 /*------------------------------------*\
   #Product-area
 \*------------------------------------*/
-
-.product-area {
-
-}
 
 .product-container {
   display: inline-block;
