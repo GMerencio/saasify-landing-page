@@ -1,0 +1,31 @@
+/*------------------------------------*\
+  #Document
+\*------------------------------------*/
+
+html {
+  font-size: 100vw/1920px * 16px;
+}
+
+
+
+/*------------------------------------*\
+  #Body
+\*------------------------------------*/
+
+body {
+  font: $main-font;
+  color: map-get($colors, regent-gray);
+  padding-left:   $body-padding;
+  padding-right:  $body-padding;
+  overflow-x: hidden;
+}
+
+
+
+/*------------------------------------*\
+  #Headings
+\*------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}

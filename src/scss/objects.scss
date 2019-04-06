@@ -1,0 +1,84 @@
+/*------------------------------------*\
+  #Text
+\*------------------------------------*/
+
+.txt {
+  @include color-modifiers;
+}
+
+.txt-nodecoration {
+  text-decoration: none;
+}
+
+.area-heading {
+  font-size: rem(44);
+  color: map-get($colors, mirage);
+}
+
+.sub-heading {
+  width: rem(520);
+  margin: 0 auto;
+}
+
+
+
+/*------------------------------------*\
+  #Background
+\*------------------------------------*/
+
+.bg-pattern {
+  position: relative;
+  
+  &::before {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    content: "";
+    width:  100%;
+    height: 100%;
+    background-repeat:  no-repeat;
+  }
+}
+
+  .bg-pattern__1::before {
+    background-image:     url('../img/bg-pattern-1.png');
+    background-size:      contain;
+  }
+
+  .bg-pattern__2::before {
+    left: -#{$body-padding};
+    width: 100vw;
+    background-image: url('../img/bg-pattern-2.png');
+    background-size:  cover;
+  }
+
+  .bg-pattern__3::before {
+    left: -#{$body-padding};
+    width: 100vw;
+    background-image: url('../img/bg-pattern-3.png');
+    background-size:  contain;
+  }
+
+
+
+/*------------------------------------*\
+  #Image
+\*------------------------------------*/
+
+.img-rounded {
+  border-radius: 50%;
+}
+
+
+
+/*------------------------------------*\
+  #List
+\*------------------------------------*/
+
+.li-check {
+  list-style: url('../img/checkmark-circle.svg');
+}
+
+.li-cross {
+  list-style: url('../img/close-circle.svg');
+}

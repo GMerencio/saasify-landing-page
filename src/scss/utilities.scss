@@ -1,0 +1,36 @@
+/*------------------------------------*\
+  #Layout
+\*------------------------------------*/
+
+.float-right {
+  float: right;
+}
+
+.clear-after::after {
+  clear: both;
+}
+
+
+
+/*------------------------------------*\
+  #Decoration
+\*------------------------------------*/
+
+.circlet-block {
+  display: block;
+}
+
+.circlet {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 100%;
+  width: rem(16);
+  height: rem(16);
+  background-color: map-get($colors, regent-gray);
+  opacity: 0.3;
+}
+
+.circlet--filled {
+  background-color: map-get($colors, mirage);
+  opacity: 1;
+}

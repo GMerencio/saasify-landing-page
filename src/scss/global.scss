@@ -1,0 +1,62 @@
+/*------------------------------------*\
+  #Mixins
+\*------------------------------------*/
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+@mixin color-modifiers($attribute: 'color', $prefix: '-') {
+  @each $name, $hex in $colors {
+    &#{$prefix}#{$name} {
+      #{$attribute}: $hex;
+    }
+  }
+}
+
+
+
+/*------------------------------------*\
+  #Config
+\*------------------------------------*/
+ 
+$browser-context: 16;
+$body-padding: rem(250);
+
+
+
+/*------------------------------------*\
+  #Colors
+\*------------------------------------*/
+
+$colors: (
+  white: #FFF,
+  regent-gray: #919AA3,
+  cadet-blue: #B0AFC6,
+  tarawera: #072A44,
+  mirage: #171C34,
+  science-blue: #0074E4,
+  picton-blue: #308DE8,
+  east-bay: #414172
+);
+
+
+
+/*------------------------------------*\
+  #Typography
+\*------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+$main-font: rem(18) 'Poppins', sans-serif;
+
+
+
+/*------------------------------------*\
+  #Breakpoints
+\*------------------------------------*/
+
+$bp-small: em(768);
