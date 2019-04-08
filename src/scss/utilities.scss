@@ -18,6 +18,10 @@
 
 .circlet-block {
   display: block;
+  width: rem(90);
+  margin-bottom:  rem(99);
+  margin-left:    auto;
+  margin-right:   auto;
 }
 
 .circlet {
@@ -28,6 +32,11 @@
   height: rem(16);
   background-color: map-get($colors, regent-gray);
   opacity: 0.3;
+  margin-right: rem(20);
+  
+  &:nth-last-child(1) {
+    margin-right: 0;
+  }
 }
 
 .circlet--filled {

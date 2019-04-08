@@ -31,7 +31,10 @@
 \*------------------------------------*/
 
 .slideshow {
-  display: inline-block;
+  margin-top:     rem(80);
+  margin-bottom:  rem(41);
+  margin-left:    auto;
+  margin-right:   auto;
   position: relative;
   width: rem(964);
   height: rem(648);
@@ -59,8 +62,8 @@
 .toggle-switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: rem(60);
+  height: rem(26);
 }
 
   .toggle-switch__checkbox {
@@ -74,33 +77,26 @@
     left:   0;
     right:  0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: map-get($colors, white);
     transition: .4s;
-    border-radius: 34px;
+    border-radius: rem(13);
+    border: rem(1) solid rgba(154, 154, 154, 0.4);
     
     &::before {
       position: absolute;
       content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
+      height: rem(18);
+      width: rem(18);
+      left: rem(4);
+      bottom: rem(2.5);
+      background-color: map-get($colors, picton-blue);
       transition: .4s;
       border-radius: 50%;
     }
-  } 
-  
-  .toggle-switch__checkbox:checked + .toggle-switch__slider {
-    background-color: #2196F3;
-  }
-
-  .toggle-switch__checkbox:focus + .toggle-switch__slider {
-    box-shadow: 0 0 1px #2196F3;
   }
 
   .toggle-switch__checkbox:checked + .toggle-switch__slider::before {
-    transform: translateX(26px);
+    transform: translateX(rem(33));
   }
 
 
@@ -110,15 +106,50 @@
 \*------------------------------------*/
 
 .box-container {
-
+  display: flex;
 }
 
   .box-container__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: rem(420);
+    margin-right: rem(80);
+    border-radius: rem(10);
+    font-size: rem(16);
+    padding-right:  rem(37);
+    padding-left:   rem(37);
+    
+    h3 {
+      font-size: rem(24);
+      color: map-get($colors, mirage);
+      margin-top: rem(40);
+    }
+    
+    p {
+      width: rem(320);
+    }
+  }
   
+  .box-container__item--alt {
+    height: rem(364);
+    margin-right: rem(100);
+    padding: 0;
+    
+    h3 {
+      text-transform: uppercase;
+      font-size: rem(12);
+      color: map-get($colors, shuttle-gray);
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: rem(43);
+    }
   }
   
   .box-container__item--special {
-  
+    box-shadow: 0 rem(4) rem(15) rgba(7, 42, 68, 0.1);
   }
 
 
@@ -155,7 +186,11 @@
     width: 100vw;
     height: 100%;
     left: -#{$body-padding};
-    background-color: map-get($colors, east-bay);
+    background-color: rgba(42, 42, 152, 0.7);
+  }
+  
+  .primary-nav__link {
+    color: map-get($colors, white);
   }
 }
 
@@ -217,18 +252,96 @@
 
 
 /*------------------------------------*\
+  #Solutions-area
+\*------------------------------------*/
+
+.solutions-area {
+  margin-bottom: rem(280);
+  
+  .sub-heading {
+    margin-bottom: rem(120);
+  }
+}
+
+
+
+/*------------------------------------*\
+  #Features-area
+\*------------------------------------*/
+
+.features-area {
+  margin-bottom: rem(280);
+}
+
+
+
+/*------------------------------------*\
+  #Testimonials-area
+\*------------------------------------*/
+
+.testimonials-area {
+  margin-bottom: rem(367);
+  padding-top: rem(145);
+
+  .sub-heading {
+    margin-bottom: rem(80);
+  }
+}
+
+.testimonials-txt {
+  font-size: rem(20);
+  color: map-get($colors, mirage);
+}
+
+
+
+/*------------------------------------*\
   #Pricing-area
 \*------------------------------------*/
 
+.pricing-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom:  rem(82);
+  
+  .box-container {
+    margin-bottom: rem(80);
+  }
+}
+
 .pricing-options {
   display: inline-flex;
-  margin: 0 auto;
+  width: rem(308);
+  justify-content: space-between;
+  align-items: center;
+  margin-top:     rem(80);
+  margin-bottom:  rem(40);
+  font-size: rem(14);
+  font-weight: bold;
 }
 
 .txt-price {
+  font-size: rem(28);
+  color: map-get($colors, mirage);
+  font-weight: 500;
+
   &::before {
     content: "$";
+    color: map-get($colors, science-blue);
+    font-size: rem(18);
+    margin-right: rem(5);
   }
+  
+  &::after {
+    font-size: rem(12);
+    margin-left: rem(5);
+    color: map-get($colors, regent-gray);
+  }
+}
+
+.txt-price--special {
+  color: map-get($colors, science-blue);
 }
 
 .txt-price--monthly {
@@ -244,7 +357,7 @@
 }
 
 .txt-selected {
-  font-weight: bold;
+  color: map-get($colors, mirage);
 }
 
 
@@ -254,26 +367,41 @@
 \*------------------------------------*/
 
 .page-footer {
-  position: relative;
   font-size: rem(12);
-  color: map-get($colors, mirage);
+  height: rem(572);
+  padding-top: rem(287);
+  text-align: center;
   
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -#{$body-padding};
-    z-index: -1;
-    width: 100vw;
-    height: 100%;
-    background: linear-gradient(153deg, #00FFFFFF, #EBEEF0);
+  p {
+    margin: 0;
   }
 }
 
   .page-footer__grid {
     display: flex;
+    margin-bottom: rem(80);
+    justify-content: space-between;
   }
   
   .page-footer__column {
+    list-style: none;
+    line-height: 2.2;
+    margin: 0;
+    
+    a {
+      text-decoration: none;
+      color: map-get($colors, regent-gray);
+      font-size: rem(14);
+    }
+  }
   
+  .page-footer__heading {
+    text-transform: uppercase;
+    font-size: rem(13);
+    color: map-get($colors, mirage);
+    font-weight: 500;
+  }
+  
+  .page-footer__img {
+    align-self: start;
   }

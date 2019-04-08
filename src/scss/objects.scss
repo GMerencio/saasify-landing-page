@@ -10,6 +10,10 @@
   text-decoration: none;
 }
 
+.txt-center {
+  text-align: center;
+}
+
 .area-heading {
   font-size: rem(44);
   color: map-get($colors, mirage);
@@ -18,6 +22,7 @@
 .sub-heading {
   width: rem(520);
   margin: 0 auto;
+  margin-top: rem(15);
 }
 
 
@@ -25,6 +30,10 @@
 /*------------------------------------*\
   #Background
 \*------------------------------------*/
+
+.bg {
+  @include color-modifiers($attribute: 'background-color');
+}
 
 .bg-pattern {
   position: relative;
@@ -49,14 +58,31 @@
     left: -#{$body-padding};
     width: 100vw;
     background-image: url('../img/bg-pattern-2.png');
-    background-size:  cover;
+    background-size:  contain;
   }
 
   .bg-pattern__3::before {
     left: -#{$body-padding};
-    width: 100vw;
+    width:  100vw;
+    height: 120%;
     background-image: url('../img/bg-pattern-3.png');
     background-size:  contain;
+  }
+  
+  .bg-pattern__4::before {
+    left: -#{$body-padding};
+    top:  -#{rem(144)};
+    width: 100vw;
+    background-image: url('../img/bg-pattern-4.png');
+    background-size:  cover;
+  }
+  
+  .bg-pattern__5::before {
+    left: -#{$body-padding};
+    top:  0;
+    width: 100vw;
+    background-image: url('../img/bg-pattern-5.png');
+    background-size:  cover;
   }
 
 
@@ -74,6 +100,11 @@
 /*------------------------------------*\
   #List
 \*------------------------------------*/
+
+.list-basic {
+  padding: 0;
+  text-align: left;
+}
 
 .li-check {
   list-style: url('../img/checkmark-circle.svg');
