@@ -52,6 +52,9 @@
   .bg-pattern__1::before {
     background-image:     url('../img/bg-pattern-1.png');
     background-size:      contain;
+    @media (max-width: $bp-medium) {
+      display: none;
+    }
   }
 
   .bg-pattern__2::before {

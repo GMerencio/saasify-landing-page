@@ -18,6 +18,10 @@ body {
   padding-left:   $body-padding;
   padding-right:  $body-padding;
   overflow-x: hidden;
+  
+  @media (max-width: $bp-medium) {
+    font-size: rem(25);
+  }
 }
 
 

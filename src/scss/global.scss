@@ -43,7 +43,8 @@ $colors: (
   picton-blue: #308DE8,
   east-bay: #414172,
   dusty-gray: #9A9A9A,
-  shuttle-gray: #586377
+  shuttle-gray: #586377,
+  black: #000
 );
 
 
@@ -62,3 +63,4 @@ $main-font: rem(18) 'Poppins', sans-serif;
 \*------------------------------------*/
 
 $bp-small: em(768);
+$bp-medium: em(960);

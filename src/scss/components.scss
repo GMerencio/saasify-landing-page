@@ -18,6 +18,7 @@
 }
 
 .btn--head {
+  margin: 0;
   width: rem(180);
   background-color: map-get($colors, white);
   color: map-get($colors, tarawera);
@@ -131,6 +132,10 @@
     p {
       width: rem(320);
     }
+    
+    @media (max-width: $bp-medium) {
+      font-size: rem(22);
+    }
   }
   
   .box-container__item--alt {
@@ -140,11 +145,15 @@
     
     h3 {
       text-transform: uppercase;
-      font-size: rem(12);
+      font-size: rem(16);
       color: map-get($colors, shuttle-gray);
-      font-weight: 600;
+      font-weight: 500;
       margin-top: 0;
       margin-bottom: rem(43);
+      
+      @media (max-width: $bp-medium) {
+        font-size: rem(22);
+      }
     }
   }
   
@@ -159,38 +168,53 @@
 \*------------------------------------*/
 
 .page-head {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
   font-size: rem(16);
   margin-top:     rem(40);
   margin-bottom:  rem(140);
-  display: inline-flex;
-  align-items: center;
+  
+  @media (max-width: $bp-medium) {
+    font-size: rem(24);
+  }
 }
  
   .page-head__login {
-    margin-left:  rem(454.13);
+    margin-left:  auto;
     margin-right: rem(40.3);
     color: map-get($colors, white);
     text-decoration: none;
     font-weight: bold;
+    
+    @media (max-width: $bp-medium) {
+      color: map-get($colors, black);
+    }
   }
 
 .header-fixed {
   position: fixed;
   z-index: 1;
   margin-top: 0;
+  right: 0;
+  padding-left:   $body-padding;
+  padding-right:  $body-padding;
   
   &::before {
-    position: absolute;
-    z-index: -1;
-    content: "";
-    width: 100vw;
+    width: auto;
     height: 100%;
-    left: -#{$body-padding};
+    right: 0;
     background-color: rgba(42, 42, 152, 0.7);
   }
   
   .primary-nav__link {
     color: map-get($colors, white);
+  }
+  
+  @media (max-width: $bp-medium) {
+    .page-head__login {
+      color: map-get($colors, white);
+    }
   }
 }
 
@@ -312,13 +336,18 @@
 
 .pricing-options {
   display: inline-flex;
-  width: rem(308);
+  width: rem(370);
   justify-content: space-between;
   align-items: center;
   margin-top:     rem(80);
   margin-bottom:  rem(40);
-  font-size: rem(14);
-  font-weight: bold;
+  font-size: rem(18);
+  font-weight: 500;
+  
+  @media (max-width: $bp-medium) {
+    font-size: rem(23);
+    width: rem(420);
+  }
 }
 
 .txt-price {
@@ -331,12 +360,20 @@
     color: map-get($colors, science-blue);
     font-size: rem(18);
     margin-right: rem(5);
+    
+    @media (max-width: $bp-medium) {
+      font-size: rem(24);
+    }
   }
   
   &::after {
     font-size: rem(12);
     margin-left: rem(5);
     color: map-get($colors, regent-gray);
+    
+    @media (max-width: $bp-medium) {
+      font-size: rem(20);
+    }
   }
 }
 
@@ -367,13 +404,18 @@
 \*------------------------------------*/
 
 .page-footer {
-  font-size: rem(12);
+  font-size: rem(15);
   height: rem(572);
   padding-top: rem(287);
   text-align: center;
   
   p {
     margin: 0;
+  }
+  
+  @media (max-width: $bp-medium) {
+    font-size: rem(20);
+    padding-top: rem(260);
   }
 }
 
@@ -391,15 +433,23 @@
     a {
       text-decoration: none;
       color: map-get($colors, regent-gray);
-      font-size: rem(14);
+      font-size: rem(16);
+      
+      @media (max-width: $bp-medium) {
+        font-size: rem(20);
+      }
     }
   }
   
   .page-footer__heading {
     text-transform: uppercase;
-    font-size: rem(13);
+    font-size: rem(17);
     color: map-get($colors, mirage);
     font-weight: 500;
+    
+    @media (max-width: $bp-medium) {
+        font-size: rem(22);
+    }
   }
   
   .page-footer__img {
