@@ -23,6 +23,10 @@
   width: rem(520);
   margin: 0 auto;
   margin-top: rem(15);
+  
+  @media (max-width: $bp-small) {
+    width:  auto;
+  }
 }
 
 
@@ -62,6 +66,10 @@
     width: 100vw;
     background-image: url('../img/bg-pattern-2.png');
     background-size:  contain;
+    
+    @media (max-width: $bp-small) {
+      display: none;
+    }
   }
 
   .bg-pattern__3::before {
@@ -70,6 +78,10 @@
     height: 120%;
     background-image: url('../img/bg-pattern-3.png');
     background-size:  contain;
+    
+    @media (max-width: $bp-small) {
+      display: none;
+    }
   }
   
   .bg-pattern__4::before {
@@ -78,6 +90,14 @@
     width: 100vw;
     background-image: url('../img/bg-pattern-4.png');
     background-size:  cover;
+    
+    @media (max-width: $bp-small) {
+      left: 0;
+    }
+    
+    @media (max-width: $bp-smaller) {
+      display: none;
+    }
   }
   
   .bg-pattern__5::before {
@@ -86,6 +106,10 @@
     width: 100vw;
     background-image: url('../img/bg-pattern-5.png');
     background-size:  cover;
+    
+    @media (max-width: $bp-small) {
+      left: 0;
+    }
   }
 
 
@@ -93,6 +117,10 @@
 /*------------------------------------*\
   #Image
 \*------------------------------------*/
+
+.img-responsive {
+  max-width: 100%;
+}
 
 .img-rounded {
   border-radius: 50%;
